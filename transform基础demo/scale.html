@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>scale缩放</title>
+<style>
+	.section {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+		transition: 0.5s; 
+	}
+	:active .section {
+		transform: scale(0.5);
+	}
+</style>
+</head>
+
+<body>
+<div class="section"></div>
+</body>
+</html>
