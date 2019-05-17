@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>瀑布流2</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #dedede;
+	}
+	.container {
+		display: flex;
+		margin: 0 auto;
+		flex-direction: row;
+		width: 80%;
+		
+	}
+	.item {
+		flex: 1;
+		margin: 15px;
+	} 
+	img {
+		border: 10px solid #fff;
+		border-radius: 5px;
+		width: 100%;
+		cursor: pointer;
+		transition: all .3s;
+	}
+	img:hover {
+		transform: scale(1.02);
+		-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.25);
+		box-shadow: 2px 2px 5px rgba(0,0,0,.25);
+	}
+</style>
+<body>
+	<div class="container">
+		<div id="pubu-01" class="item"></div>
+		<div id="pubu-02" class="item"></div>
+		<div id="pubu-03" class="item"></div>
+		<div id="pubu-04" class="item"></div>
+	</div>
+	<script>
+		//1.计算每一列的高度
+		var minDiv = function() {
+			var pb1 = document.getElementById("pubu-01")
+			var pb2 = document.getElementById("pubu-02")
+			var pb3 = document.getElementById("pubu-03")
+			var pb4 = document.getElementById("pubu-04")
+			var pbImg_1 = pb1.children
+			var pbImg_2 = pb2.children
+			var pbImg_3 = pb3.children
+			var pbImg_4 = pb4.children
+			var pb1Height = jisuan(pbImg_1)
+			var pb2Height = jisuan(pbImg_2)
+			var pb3Height = jisuan(pbImg_3)
+			var pb4Height = jisuan(pbImg_4)
+			//获取最小列
+			var minPb = Math.min(pb1Height,pb2Height,pb3Height,pb4Height)
+			if (minPb == pb1Height) {
+				return pb1
+			}
+			if (minPb == pb2Height) {
+				return pb2
+			}
+			if (minPb == pb3Height) {
+				return pb3
+			}
+			if (minPb == pb4Height) {
+				return pb4
+			}
+		}
+		var jisuan = function(pbImgs) {
+			if (pbImgs == null || pbImgs.length == 0) {
+				return 0
+			} else {
+				var height = 0
+				//获取当前列每一个图片
+				for (var i = 0, len = pbImgs.length; i < len; i++) {
+					var img = pbImgs[i]
+					var h = img.height
+					height += h
+				}
+				return height
+			}
+		}
+		//屏幕默认大小，初始化图片的占用位置
+		var windowHeight = window.innerHeight + 500
+		var imgId
+		window.onload = function(){
+			inserImage()
+			//滚动加载图片
+			window.onscroll =function() {
+				if ((document.documentElement.scrollTop + window.screen.height) > document.documentElement.scrollHeight) {
+					windowHeight += 500
+					inserImage()
+			} 
+			}
+			
+		}
+		//插入图片函数
+		var inserImage = function() {
+			var inter = setInterval(function(){
+				if (document.documentElement.scrollHeight > windowHeight) {
+					clearInterval(inter)
+				}
+				//创建并插入图片
+					var img = document.createElement("img")
+					imgId = Math.floor(Math.random()*99 + 1)
+					img.src = `images/1 (${imgId}).jpg`
+					var min = minDiv()
+					min.appendChild(img)
+			},100)
+		}
+	</script>
+</body>
+</html>
