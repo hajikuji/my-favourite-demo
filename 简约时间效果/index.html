@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>简约时间效果</title>
+<link rel="stylesheet" href="jquery.countdown.css">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html {
+		background: url(real.jpg) #b0b0b0;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+	body {
+		min-height: 600px;
+		padding: 200px 0 0;
+		overflow: hidden;
+		font: 14px/1.3 'tahoma',Arial,sans-serif;
+	}
+	#note {
+		margin: 0 auto;
+		padding: 4px;
+		width: 400px;
+		font-size: 12px;
+		color: #666;
+		text-align: center;
+		text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+	}
+</style>
+</head>
+
+<body>
+	<div id="countdown"></div>
+	<p id="note"></p>
+<script src="jquery.countdown.js"></script>
+<script>
+	$(function(){
+		var note = $("#note"),
+			ts = new Date(2019,0,1),
+			newYear = true
+		if ((new Date()) > ts) {
+			ts = (new Date()).getTime() + 10*24*60*60*1000
+			newYear = false
+		}
+		$('#countdown').countdown({
+			timestamp: ts,
+			callback: function(days,hours,minutes,seconds) {
+				var msg = ""
+				msg += days + "day" + (days==1 ? '':'s') + ", "
+				msg += hours + "hour" + (hours==1 ? '':'s') + ", "
+				msg += minutes + "minute" + (minutes==1 ? '':'s') + " and "
+				msg += seconds + "second" + (seconds==1 ? '':'s') + "</br>"
+				
+				if(newYear) {
+					msg += "left until the new year !"
+				} else {
+					msg += "left to 10 days from now !"
+				}
+				note.html(msg)
+			}
+		})
+	})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
