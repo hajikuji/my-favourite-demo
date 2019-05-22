@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+.s {
+	position: relative;
+	padding: 20px;
+}
+.s input {
+	display: none;
+	
+}
+.s1 {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: 40px;
+	background-color: #ccc;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .4s;
+}
+.s1::before {
+	content: '';
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	background-color: #fff;
+}
+.s input:checked~.s1 {
+	background-color: #03a9f4;
+}
+.s input:checked~.s1::before {
+	left: 64px;
+}
+
+.s2 {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: 40px;
+	background-color: #ccc;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .4s;
+	border-radius: 20px;
+}
+.s2::before {
+	content: '';
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	background-color: #fff;
+}
+.s input:checked~.s2 {
+	background-color: #03a9f4;
+}
+.s input:checked~.s2::before {
+	left: 64px;
+}
