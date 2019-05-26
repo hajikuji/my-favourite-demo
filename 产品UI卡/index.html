@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品UI卡</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="card">
+	<div class="top-section">
+	<img id="image-container" src="images/1.jpg" alt="">
+	<div class="nav">
+	<img onClick="changeSrc(this)" src="images/1.jpg" alt="">
+	<img onClick="changeSrc(this)" src="images/2.jpg" alt="">
+	<img onClick="changeSrc(this)" src="images/3.jpg" alt="">
+	<img onClick="changeSrc(this)" src="images/4.jpg" alt="">
+	</div>
+	<div class="price">$80</div>
+	</div>
+	<div class="product-info">
+		<div class="name">rrrrred</div>
+		<div class="dis">muhahahaha</div>
+		<a href="#" class="btn">Add To Cart</a>
+	</div>
+</div>
+<script>
+	var container = document.getElementById("image-container")
+	function changeSrc(image) {
+	container.src = image.src
+	}
+</script>
+</body>
+</html>
