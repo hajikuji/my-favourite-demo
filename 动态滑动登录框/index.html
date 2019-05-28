@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>动态滑动登录框</title>
+<link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="show-login-btn"><i class="fas fa-sign-in-alt"> Show Login Form</i></div>
+<div class="login-box">
+	<div class="hide-login-btn"><i class="fas fa-times"></i></div>
+	<form class="login-form" action="index.html" method="post">
+		<h1>Welcome</h1>
+		<input class="txtb" type="text" placeholder="Username">
+		<input class="txtb" type="password" placeholder="Password">
+		<input class="login-btn" type="submit" value="submit">
+	</form>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+	var loginBox = $(".login-box");
+$(".hide-login-btn,.show-login-btn").click(function(){
+	loginBox.toggleClass("push");
+});	
+</script>
+</body>
+</html>
