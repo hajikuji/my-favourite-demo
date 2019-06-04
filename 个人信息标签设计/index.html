@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>滑块式网页设计</title>
+<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/owl-carousel/1.32/owl.carousel.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/owl-carousel/1.32/owl.theme.min.css" rel="stylesheet">
+
+
+<style>
+	body {
+		font-family: tahoma;
+		background-color: #f1c40f;
+	}
+	.testimonal {
+		position: relative;
+		background-color: #fff;
+		text-align: center;
+		padding: 30px 30px 50px;
+		margin: 0 15px 100px;
+		margin-top: 168px;
+	}
+	.testimonal::before,
+	.testimonal::after {
+		content: "";
+		border-top: 40px solid #fff;
+		border-right: 125px solid transparent;
+		position: absolute;
+		bottom: -40px;
+		left: 0;
+	}
+	.testimonal::after {
+		border-right: none;
+		border-left: 125px solid transparent;
+		left: auto;
+		right: 0;
+	}
+	.testimonal .icon {
+		display: inline-block;
+		font-size: 80px;
+		color: #f28a0b;
+		margin-bottom: 20px;
+		opacity: .6;
+	}
+	.testimonal .description {
+		font-size: 16px;
+		color: #777;
+		text-align: justify;
+		margin-bottom: 30px;
+		opacity: .9;
+		letter-spacing: -1px;
+	}
+	.testimonal .testimonial-content {
+		width: 100%;
+		position: absolute;
+		left: 0;
+	}
+	.testimonal .pic {
+		display: inline-block;
+		border: 6px solid #fff;
+		border-radius: 50%;
+		box-shadow: 0 0 2px 2px #f4770b;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+	.testimonal .pic img {
+		width: 100%;
+	}
+	.testimonal .title {
+		font-size: 15px;
+		font-weight: bold;
+		color: #fff;
+		text-transform: capitalize;
+		margin: 0 0 5px 0;
+	}
+	.testimonal .post {
+		display: block;
+		font-size: 14px;
+		color: #ffd9b8;
+	}
+	.pic img {
+		width: 100px !important;
+	}
+	.owl-theme .owl-controls {
+		margin-top: 60px;
+	}
+</style>
+</head>
+<body>
+<div class="demo">
+	<div class="container">
+		<div class="row">
+			<div id="testimonial-slider" class="owl-carousel">
+				<div class="testimonal">
+					<span class="icon fa fa-quote-left"></span>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum, qui nihil, reiciendis autem repellendus ipsum voluptatibus ut praesentium, amet dolore deleniti eaque nisi hic?
+					</p>
+					<div class="testimonial-content">
+						<div class="pic"><img src="img/image.jpeg" alt=""></div>
+						<h3 class="title">willimson</h3>
+						<span class="post">Web Developer</span>
+					</div>
+				</div>
+				<div class="testimonal">
+					<span class="icon fa fa-quote-left"></span>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum, qui nihil, reiciendis autem repellendus ipsum voluptatibus ut praesentium, amet dolore deleniti eaque nisi hic?
+					</p>
+					<div class="testimonial-content">
+						<div class="pic"><img src="img/1.jpeg" alt=""></div>
+						<h3 class="title">kiki</h3>
+						<span class="post">Web Developer</span>
+					</div>
+				</div>
+				<div class="testimonal">
+					<span class="icon fa fa-quote-left"></span>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum, qui nihil, reiciendis autem repellendus ipsum voluptatibus ut praesentium, amet dolore deleniti eaque nisi hic?
+					</p>
+					<div class="testimonial-content">
+						<div class="pic"><img src="img/2.jpg" alt=""></div>
+						<h3 class="title">popi</h3>
+						<span class="post">Web Developer</span>
+					</div>
+				</div>
+
+				<div class="testimonal">
+					<span class="icon fa fa-quote-left"></span>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum, qui nihil, reiciendis autem repellendus ipsum voluptatibus ut praesentium, amet dolore deleniti eaque nisi hic?
+					</p>
+					<div class="testimonial-content">
+						<div class="pic"><img src="img/3.jpeg" alt=""></div>
+						<h3 class="title">hanabi</h3>
+						<span class="post">Web Developer</span>
+					</div>
+				</div>
+<div class="testimonal">
+					<span class="icon fa fa-quote-left"></span>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum, qui nihil, reiciendis autem repellendus ipsum voluptatibus ut praesentium, amet dolore deleniti eaque nisi hic?
+					</p>
+					<div class="testimonial-content">
+						<div class="pic"><img src="img/4.jpg" alt=""></div>
+						<h3 class="title">hanabi</h3>
+						<span class="post">Web Developer</span>
+					</div>
+				</div>
+				<div class="testimonal">
+					<span class="icon fa fa-quote-left"></span>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum, qui nihil, reiciendis autem repellendus ipsum voluptatibus ut praesentium, amet dolore deleniti eaque nisi hic?
+					</p>
+					<div class="testimonial-content">
+						<div class="pic"><img src="img/5.jpg" alt=""></div>
+						<h3 class="title">hanabi</h3>
+						<span class="post">Web Developer</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/owl-carousel/1.32/owl.carousel.min.js"></script>
+
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$("#testimonial-slider").owlCarousel({
+			items: 3,
+			itemsDesktop:[1000,3],
+			itemsDesktopSmall: [979,2],
+			itemsTablet: [768,2],
+			itemsMobile: [650,1],
+			pagination: true,
+			autoPlay: true
+		})
+	})
+</script>
+</body>
+</html>

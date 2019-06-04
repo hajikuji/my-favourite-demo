@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+	background: url(bg.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.box {
+	width: 450px;
+	background-color: rgba(0,0,0,.4);
+	padding: 40px;
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+	color: #fff;
+	font-family: sans-serif;
+}
+img.box-img {
+	width: 200px;
+	border-radius: 50%;
+}
+.box h1 {
+	font-size: 40px;
+	letter-spacing: 4px;
+	font-weight: 100;
+}
+.box h5 {
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-weight: 100;
+}
+.box p {
+	text-align: justify;
+}
+.box ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.box li {
+	display: inline-block;
+	margin: 6px;
+}
+.box a {
+	color: #000;
+	text-decoration: none;
+	font-size: 40px;
+}
+.box a:hover {
+	color: #b9b9b9;
+}
