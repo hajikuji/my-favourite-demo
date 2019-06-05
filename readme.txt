@@ -2,4 +2,4 @@
 2.javascript的cssText属性：ele.style.cssText="color:red;opacity:1;"
 3.css3中的box-shadow方法：box-shadow: h-shadow v-shadow blur spread color inset;
 4.point-event:none   =>取消target
-
+5.content: attr(name) 返回name属性的字符串
