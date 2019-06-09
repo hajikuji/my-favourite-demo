@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>开门大吉</title>
+<style>
+	body {
+		perspective: 500px;
+	}
+	section {
+		position: relative;
+		margin: 30px auto;
+		width: 300px;
+		height: 220px;
+		background-color: greenyellow;
+	}
+	section .door-l,
+	section .door-r {
+		transition: 0.5s;
+	}
+	section:hover .door-l,
+	section:hover .door-r {
+		
+	}
+	section:hover .door-l {
+		
+		transform: rotateY(-180deg);
+	}
+	section:hover .door-r {
+			
+		transform: rotateY(180deg);
+	}
+	.door-l,
+	.door-r {
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		border: 1px solid #000;
+		background-color: pink;
+	}
+	.door-l {
+		transform-origin: left;	
+		left: 0;
+	}
+	.door-r {
+		transform-origin: right;
+		right: 0;
+	}
+	.door-l::before,
+	.door-r::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 10px;
+		height: 10px;
+		border: 1px solid #000;
+		border-radius: 50%;
+	}
+	.door-l::before {
+		right: 5px;
+	}
+	.door-r::before {
+		left: 5px;
+	}
+</style>
+</head>
+<body>
+	<section>
+		<div class="door-l"></div>
+		<div class="door-r"></div>
+	</section>
+</body>
+</html>

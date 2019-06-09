@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>随机动画大小冒泡特效</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+		<div class="wrap">
+			<div class="bubbles" num="10" duration="10">
+			</div>
+		</div>
+	<script>
+		;(function(w,d){
+		var bubbles = d.querySelector(".bubbles");
+		var bubblesWidth = bubbles.clientWidth;
+		var num = bubbles.getAttribute("num");
+		var duration = bubbles.getAttribute("duration");
+		bubbleUp();
+		setInterval(bubbleUp,duration * 1000);
+			function bubbleUp() {
+			bubbles.innerHTML = "";
+			for(var i = 0;i < num; i++) {
+			var bubbleDiv = d.createElement("div");
+			bubbleDiv.classList.add("bubble");
+			bubbleDiv.style.cssText = `
+				transform: translate(${bubblesWidth * Math.random()}px,0) scale(${5 * Math.random()});
+				animation: up ${duration * Math.random() + 1}s ease-in-out;
+			`
+			bubbles.appendChild(bubbleDiv);
+			}
+			
+			}
+
+		})(window,document);
+	</script>
+</body>
+</html>

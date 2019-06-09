@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>动画搜索框</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="middle">
+		<form class="search-box">
+		<input type="text" class="input">
+		<button class="btn"></button>
+		</form>
+	</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js">
+</script>
+<script>
+$(".search-box").on("submit",function(e){
+	var ev = e || window.event;
+	e.preventDefault();
+})
+	$(".btn").on("click",function(){
+		$(".input").toggleClass("inclicked");
+		$(".btn").toggleClass("close");
+	});
+</script>
+</body>
+</html>

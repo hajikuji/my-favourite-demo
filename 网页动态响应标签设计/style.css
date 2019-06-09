@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #333;
+	font-family: sans-serif;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+}
+li {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: #777;
+	margin: 0 20px;
+	border-radius: 50%;
+	transition: .5s;
+	cursor: pointer;
+}
+ul li:hover {
+	background-color: #86ff3b;
+	box-shadow: 0 0 0 4px #333,
+		0 0 0 6px #86ff3b;
+}
+ul li .content {
+	position: absolute;
+	bottom: 55px;
+	width: 400px;
+	background-color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	visibility: hidden;
+	opacity: 0;
+	transform: translate(-50%,-50px);
+	transition: .5s;
+}
+ul li .content::before {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	transform: rotate(45deg);
+	bottom: -10px;
+	left: 194px;
+	border-radius: 3px;
+	background-color: #fff;
+}
+ul li .content h2 {
+	margin: 0;
+	padding: 0;
+}
+ul li:hover .content {
+	visibility: visible;
+	opacity: 1;
+	transform: translate(-50%,0px);
+} 

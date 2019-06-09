@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>网页背景缩放效果</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hero-back">
+	<img src="android-chrome-192x192.png" alt="">
+</div>
+<div class="content">
+	<h1>Content goes here</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit cupiditate dicta illum quos, inventore, quas aut, mollitia ea, temporibus placeat fugiat. Corrupti, impedit recusandae! Voluptatum aliquam, eaque odio ipsa nulla, iure laboriosam, porro sint incidunt consequatur ea cupiditate fugit.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit cupiditate dicta illum quos, inventore, quas aut, mollitia ea, temporibus placeat fugiat. Corrupti, impedit recusandae! Voluptatum aliquam, eaque odio ipsa nulla, iure laboriosam, porro sint incidunt consequatur ea cupiditate fugit.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit cupiditate dicta illum quos, inventore, quas aut, mollitia ea, temporibus placeat fugiat. Corrupti, impedit recusandae! Voluptatum aliquam, eaque odio ipsa nulla, iure laboriosam, porro sint incidunt consequatur ea cupiditate fugit.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit cupiditate dicta illum quos, inventore, quas aut, mollitia ea, temporibus placeat fugiat. Corrupti, impedit recusandae! Voluptatum aliquam, eaque odio ipsa nulla, iure laboriosam, porro sint incidunt consequatur ea cupiditate fugit.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus velit cupiditate dicta illum quos, inventore, quas aut, mollitia ea, temporibus placeat fugiat. Corrupti, impedit recusandae! Voluptatum aliquam, eaque odio ipsa nulla, iure laboriosam, porro sint incidunt consequatur ea cupiditate fugit.</p>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+	$(window).scroll(function(){
+		var scrollPos = $(this).scrollTop();
+		var heroBack = $(".hero-back");
+		heroBack.css({
+			'background-size': 100 + scrollPos + "%"
+		})
+	});
+</script>
+</body>
+</html>

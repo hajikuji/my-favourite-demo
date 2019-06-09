@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D翻转动画效果</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <div class="business-card middle">
+        <div class="front">
+            <h2>qianguan  shun</h2>
+            <span>Web Designer</span>
+            <div class="contact-info">
+                <li><i class="fas fa-mobile-alt"></i>+0000000</li>
+                <li><i class="fas fa-envelope"></i>akiai@qq.com</li>
+                <li><i class="fas fa-map-marker-alt"></i>YAH RPC</li>
+            </div>
+        </div>
+        <div class="back">
+            DarkCode
+        </div>
+    </div>
+<script src="jquery.min.js"></script>
+<script>
+$(".business-card").on("click",function(){
+    $(this).toggleClass("active");
+});
+</script>
+</body>
+</html>

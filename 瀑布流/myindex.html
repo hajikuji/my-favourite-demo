@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>手写一个瀑布流</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+background-color: #dedede;
+	}
+#box {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 auto;
+}
+#box div {
+	flex: 1;
+	padding: 15px;
+}
+img {
+	width: 100%;
+	border: 10px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,.25);
+	cursor: pointer;
+	transition: all .2s
+}
+	img:hover {
+		transform: scale(1.01) translate3d(0,-3px,0);
+		box-shadow: 2px 2px 2px rgba(0,0,0,.27);
+	}
+</style>
+</head>
+
+<body>
+<div id="box">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+</div>
+<script>
+	window.onload = function() {
+		initImg()
+		window.onscroll = function() {
+			if (Math.ceil(document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.scrollHeight) {
+				windowHeight += 500	
+				initImg()
+			}
+			
+		}
+	} 
+	//加载的窗口高度
+	var windowHeight = window.innerHeight + 500
+	//获取每一列的高度
+	function getMin() {
+		//获取每一列的容器元素
+		var item1 = document.getElementById("item1")
+		var item2 = document.getElementById("item2")
+		var item3 = document.getElementById("item3")
+		var item4 = document.getElementById("item4")
+		//获取每一列的子元素
+		var item_1 = item1.children
+		var item_2 = item2.children
+		var item_3 = item3.children
+		var item_4 = item4.children
+		//计算每一列的高度
+		var itemHeight1 = getHeight(item_1)
+		var itemHeight2 = getHeight(item_2)
+		var itemHeight3 = getHeight(item_3)
+		var itemHeight4 = getHeight(item_4)
+		
+		//获取最小列的高度的节点
+		var result = Math.min (itemHeight1,itemHeight2,itemHeight3,itemHeight4)
+		if (itemHeight1 == result) {
+			return item1
+		} else if (itemHeight2 == result) {
+			return item2
+		} else if (itemHeight3 == result) {
+			return item3
+		} else if (itemHeight4 == result) {
+			return item4
+		}
+//		console.log(itemHeight1)
+//		console.log(itemHeight2)
+//		console.log(itemHeight3)
+//		console.log(itemHeight4)
+	}
+	//在最小高度列中插入图片
+	function insertImg() {
+		//创建图片节点
+		var img = document.createElement("img")
+		var imgId = Math.floor(Math.random()*99 + 1)
+		img.src =  'images/1 ('+ imgId +').jpg'
+		getMin().appendChild(img)
+	}
+	//初始化插入图片
+	
+	function initImg() {
+		var interval = setInterval(function(){
+			//停止插入图片
+		if(document.documentElement.scrollHeight > windowHeight) {
+			clearInterval(interval)
+		}
+			insertImg()
+		},100)
+		
+	}
+		
+		//计算高度的函数
+		 function getHeight(inValue) {
+			
+			 if (inValue == null || inValue.length == 0) {
+				 return 0
+			 } else {
+				  var h = 0
+				  //获取当前列图片的高度
+				 for (var i = 0, len = inValue.length; i < len; i++) {
+					 var img = inValue[i]
+					 h += img.height
+				 }
+				 return h
+			 }
+		 }
+ 	</script>
+</body>
+</html>
