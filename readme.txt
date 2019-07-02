@@ -5,3 +5,7 @@
 5.content: attr(name) 返回name属性的字符串
 6.3D翻面的核心 设置backface-visibility: hidden; front back设置rotate
 7.clip-path(上,右,下,左);其中x,y指初始位置
+scroll-behavior: smooth----css璁剧疆椤甸潰婊氬姩鏁堟灉
+::-webkit-scrollbar--------css璁剧疆娴忚鍣ㄦ粴鍔ㄦ潯鐨勬牱寮?
+text-shadow------------x,y涓烘 鍚戝乏涓嬫柟绉诲姩 
+
