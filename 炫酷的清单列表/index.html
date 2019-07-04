@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>炫酷的清单列表</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="txtb" placeholder="Add a task">
+        <div class="notcomp">
+            <h3>Not Completed</h3>
+        </div>
+        <div class="comp">
+            <h3>Completed</h3>
+            
+
+        </div>
+
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script>
+        var $txtb = $(".txtb")
+        ,$notcomp = $(".notcomp");
+        $txtb.on("keyup",function(e){
+            // keyCode == 13 means enter
+        var nowValue = $txtb.val().trim();
+            if (e.keyCode == 13 && nowValue != "") {
+                var task = $("<div class='task'></div>").text($('.txtb').val());
+                // delete
+                var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+                    var p = $(this).parent();
+                    p.fadeOut(function(){
+                        p.remove();
+                    });
+                });
+                // check
+                var check = $("<i class='fas fa-check'></i>").click(function(){
+                    var p = $(this).parent();
+                    p.fadeOut(function(){
+                        $(".comp").append(p);
+                        p.fadeIn();
+                    });
+                    $(this).remove();
+                });
+                task.append(del,check);
+                $notcomp.append(task);
+                // to clear the input
+                $txtb.val("");
+            }
+        });
+    </script>
+</body>
+
+</html>
