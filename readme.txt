@@ -5,3 +5,10 @@
 5.content: attr(name) 返回name属性的字符串
 6.3D翻面的核心 设置backface-visibility: hidden; front back设置rotate
 7.clip-path(上,右,下,左);其中x,y指初始位置
+scroll-behavior: smooth----css完成浏览器滚动效果
+::-webkit-scrollbar-------css 隐藏滚动条
+text-shadow------------x,y
+$.text 
+$.append(a,b)
+$("<div></div>")
+
