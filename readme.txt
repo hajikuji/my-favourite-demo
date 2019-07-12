@@ -11,4 +11,4 @@ text-shadow------------x,y
 $.text 
 $.append(a,b)
 $("<div></div>")
-
+flex-wrap: wrap-reverse; 规定display：flex下的项目在必要的时候拆行或拆列，但是以相反的顺序。
