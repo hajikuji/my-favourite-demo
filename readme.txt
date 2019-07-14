@@ -8,7 +8,8 @@
 scroll-behavior: smooth----css完成浏览器滚动效果
 ::-webkit-scrollbar-------css 隐藏滚动条
 text-shadow------------x,y
-$.text 
-$.append(a,b)
+$.text -------------方法方法设置或返回被选元素的文本内容。
+$.append(a,b)---------------------在被选元素的结尾插入多组内容。
+
 $("<div></div>")
 
