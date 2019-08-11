@@ -13,3 +13,6 @@ $.append(a,b)---------------------在被选元素的结尾插入多组内容。
 
 $("<div></div>")
 flex-wrap: wrap-reverse; 规定display：flex下的项目在必要的时候拆行或拆列，但是以相反的顺序。
+svg-----------------------stroke-dasharray
+svg-----------------------stroke-dashoffset
+svg-----------------------polyine points="x1,y1 x2,y2 x3,y3"
