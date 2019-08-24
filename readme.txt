@@ -8,7 +8,11 @@
 scroll-behavior: smooth----css完成浏览器滚动效果
 ::-webkit-scrollbar-------css 隐藏滚动条
 text-shadow------------x,y
-$.text 
-$.append(a,b)
-$("<div></div>")
+$.text -------------方法方法设置或返回被选元素的文本内容。
+$.append(a,b)---------------------在被选元素的结尾插入多组内容。
 
+$("<div></div>")
+flex-wrap: wrap-reverse; 规定display：flex下的项目在必要的时候拆行或拆列，但是以相反的顺序。
+svg-----------------------stroke-dasharray
+svg-----------------------stroke-dashoffset
+svg-----------------------polyine points="x1,y1 x2,y2 x3,y3"
